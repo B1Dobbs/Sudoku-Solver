@@ -28,7 +28,7 @@ The job of Arc Consistency is to iterate through each space to reduce the values
 
 Observe the puzzle below...
 
-![alt text](docs/ExamplePuzzle.png)
+<img src="docs/ExamplePuzzle.png" width="300" height="300">
 
 The domain of the upper left space starts out as **D:{1..9}** but the constraint relationships to the spaces in the same column, row, and box mean that it can't be 9, 6, 5, 7, 1, 4, or 3. This makes the upper left space's domain as **D:{2, 8}**. 
 
