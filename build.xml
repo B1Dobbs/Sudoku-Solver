@@ -1,0 +1,28 @@
+<project>
+
+    <target name="clean">
+		<echo>Cleaning</echo>
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile">
+		<echo>Compiling</echo>
+        <mkdir dir="build/classes"/>
+        <javac srcdir="src" destdir="build/classes"/>
+    </target>
+
+    <target name="jar">
+		<echo>Building jar</echo>
+        <mkdir dir="build/jar"/>
+        <jar destfile="build/jar/SudokuSolver.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="SudokuUI"/>
+            </manifest>
+        </jar>
+    </target>
+	
+	<target name="all" depends="clean, compile, jar">
+		<echo>Building project</echo>
+	</target>
+
+</project>
